@@ -5,16 +5,16 @@ BackendAssignment is a template project built with Spring Boot for managing trai
 codes, addresses, courses offered, and contact information.
 
 Features
-REST APIs for CRUD operations on training centers.
-Integration with MySQL for data persistence.
-Validation using Spring Boot Validation.
-Database interaction using Spring Data JPA.
+-REST APIs for CRUD operations on training centers.
+-Integration with MySQL for data persistence.
+-Validation using Spring Boot Validation.
+-Database interaction using Spring Data JPA.
 
 Technology Stack
-Java 11
-Spring Boot 2.7.18
-MySQL as the database.
-Lombok for reducing boilerplate code.
+-Java 11
+-Spring Boot 2.7.18
+-MySQL as the database.
+-Lombok for reducing boilerplate code.
 
 Prerequisites
 -Java 11 or higher
@@ -33,9 +33,6 @@ Use Maven to build and run the project
 
 4. Access the API Documentation
 Once the application is running, you can explore the available endpoints using the OpenAPI UI at:
-
-bash
-Copy code
 http://localhost:8080/swagger-ui.html
 
 API Endpoints
