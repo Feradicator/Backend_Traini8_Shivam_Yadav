@@ -35,6 +35,8 @@ Use Maven to build and run the project
 Once the application is running, you can explore the available endpoints using the OpenAPI UI at:
 http://localhost:8080/swagger-ui.html
 
+5. To check apis can use postman
+
 API Endpoints
 Training Center API
 Method	Endpoint	Description
