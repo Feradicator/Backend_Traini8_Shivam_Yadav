@@ -8,7 +8,7 @@ import org.springframework.data.jpa.repository.Query;
 import com.app.model.TrainingCenter;
 
 public interface TrainingCenterRepository extends JpaRepository<TrainingCenter, Long> {
-    @Query("SELECT distinct tc FROM TrainingCenter tc LEFT JOIN FETCH tc.coursesOffered")
+    @Query("SELECT distinct tc FROM TrainingCenter tc LEFT JOIN FETCH tc.coursesOffered")//getting data in more controlled way,using jpql left join
     List<TrainingCenter> findAllWithCourses();
 
 }
