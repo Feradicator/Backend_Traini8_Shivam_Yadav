@@ -11,7 +11,7 @@ import java.util.List;
 public class TrainingCenter {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO)//default generation strategy that lets the JPA provider decide the generation method based on the underlying database.
     private Long id;
 
     @NotBlank(message = "Center name is required")
