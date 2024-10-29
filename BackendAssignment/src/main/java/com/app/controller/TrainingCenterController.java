@@ -40,9 +40,8 @@ public class TrainingCenterController {
     //         @RequestParam Optional<String> city,
     //         @RequestParam Optional<String> state,
     //         @RequestParam Optional<Integer> studentCapacity) {
-        
+    
     //     List<TrainingCenter> trainingCenters = service.getFilteredTrainingCenters(centerName, city, state, studentCapacity);
-        
     //     return ResponseEntity.ok(trainingCenters);
     // }
 }
