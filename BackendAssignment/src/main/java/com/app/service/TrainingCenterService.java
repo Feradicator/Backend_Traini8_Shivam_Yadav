@@ -4,12 +4,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import java.util.Optional;
+
+import com.app.dto.TrainingCenterDto;
 import com.app.model.TrainingCenter;
 import com.app.repository.TrainingCenterRepository;
 
 import java.time.Instant;
 import java.util.List;
 import org.springframework.data.jpa.domain.Specification;
+import java.util.stream.Collectors;
 @Service
 public class TrainingCenterService {
 
@@ -23,6 +26,20 @@ public class TrainingCenterService {
 
     public List<TrainingCenter> getAllTrainingCenters() {
         return repository.findAllWithCourses();
+    }
+    public List<TrainingCenterDto> getAllTrainingCentersLazy() {
+        List<TrainingCenter> centers= repository.findAll();
+        return centers.stream().map(center->
+        new TrainingCenterDto(
+                center.getId(),
+                center.getCenterName(),
+                center.getCenterCode(),
+
+                center.getStudentCapacity(),
+               
+                center.getContactEmail(),
+                center.getContactPhone()
+        )).collect(Collectors.toList());
     }
 
     // public List<TrainingCenter> getFilteredTrainingCenters(Optional<String> centerName, Optional<String> city,

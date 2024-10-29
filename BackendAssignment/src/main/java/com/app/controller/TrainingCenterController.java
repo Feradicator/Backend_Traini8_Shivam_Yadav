@@ -3,9 +3,12 @@ package com.app.controller;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.Optional;
+
+import com.app.dto.TrainingCenterDto;
 import com.app.model.TrainingCenter;
 import com.app.service.TrainingCenterService;
 
+import javax.transaction.Transactional;
 import javax.validation.Valid;
 import java.util.List;
 
@@ -26,6 +29,7 @@ public class TrainingCenterController {
     }
 
     @GetMapping
+    
     public ResponseEntity<List<TrainingCenter>> getAllTrainingCenters() {
         List<TrainingCenter> centers = service.getAllTrainingCenters();
         return ResponseEntity.ok(centers);
